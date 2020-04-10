@@ -1,18 +1,18 @@
 # Evidencias
 
-Nesta pasta constam as fotos com evidencias do exercicio
+Nesta pasta constam as fotos com evidencias do exercicio  
 
-Remote State
+Remote State  
 ![](remoteState.png)
 
-ELB
+ELB  
 ![](ELB.png)
 
-Security Groups
+Security Groups  
 ![](securityGroups.png)
 
-Instances com o nome do workspace
+Instances com o nome do workspace  
 ![](instances.png)
 
-Estrutura da pasta e ambientes Prod e Dev
+Estrutura da pasta e ambientes Prod e Dev  
 ![](dirTreeAndEnvs.png)
