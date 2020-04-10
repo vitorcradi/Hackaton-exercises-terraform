@@ -3,6 +3,8 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+variable "my_count" {}
+
 variable "project" {
   default = "fiap-lab"
 }
@@ -60,14 +62,14 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   ami           = "${lookup(var.aws_amis, var.aws_region)}"
 
-  count = 2
+  count = var.my_count
 
   subnet_id              = "${random_shuffle.random_subnet.result[0]}"
   vpc_security_group_ids = ["${aws_security_group.allow-ssh.id}"]
   key_name               = "${var.KEY_NAME}"
 
   provisioner "file" {
-    source      = "script.sh"
+    source      = "${path.module}/script.sh"
     destination = "/tmp/script.sh"
   }
 
